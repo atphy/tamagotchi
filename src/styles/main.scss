@@ -1,5 +1,6 @@
 body {
-    background-color: blue;
+    background-image: url("../img/solo-jaz.jpg");
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +14,38 @@ body {
     height: 70vh;
     border: 5px black solid;
     border-radius: 25px;
-    justify-content: center;
-    align-items: center;
   }
 
   .myTamagotchi {
+    display: flex;
+    justify-self: center;
     height: 60vh;
+    margin: auto;
+  }
+
+  .statusDisplay {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+  }
+
+  .fullDisplay {
+    margin-left: 4%;
+    position: absolute;
+  }
+
+  .funDisplay {
+    align-self: flex-end;
+    margin-left: 4%;
+    position: absolute;
+  }
+
+  .strengthDisplay {
+    position: absolute;
+    margin-left: 51%;
+  }
+
+  .energyDisplay {
+    position: absolute;
+    align-self: flex-end;
+    margin-left: 51%;
   }
