@@ -7,6 +7,17 @@ body {
     height: 95vh;
   }
 
+ .topButton {
+   display: flex;
+   align-items: flex-start;
+ }
+
+  .btn {
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+  }
+
   .tamagotchiDisplay {
     display: flex;
     background-color: #5f9ea0;
@@ -14,6 +25,7 @@ body {
     height: 70vh;
     border: 5px black solid;
     border-radius: 25px;
+    padding: 5px;
   }
 
   .myTamagotchi {
@@ -28,29 +40,24 @@ body {
     margin: 0;
   }
 
-  .fullDisplay {
-    margin-left: 4%;
-    position: absolute;
-  }
+.displayLeftStatus {
+  text-align: right;
+  margin-right: 20px;
+}  
 
-  .funDisplay {
-    align-self: flex-end;
-    margin-left: 4%;
-    position: absolute;
-  }
+.displayRightStatus {
+  margin-left: 20px;
+}
 
-  .strengthDisplay {
-    position: absolute;
-    margin-left: 51%;
-  }
+.hungerDisplay {
+  margin-bottom: 57vh;
+}
 
-  .energyDisplay {
-    position: absolute;
-    align-self: flex-end;
-    margin-left: 51%;
-  }
+.strengthDisplay {
+  margin-bottom: 57vh;
+}
 
-  .displayTopHeaders {
+  .displayLeftHeaders {
     text-align: right;
     margin-right: 20px;
   }
@@ -59,7 +66,7 @@ body {
     margin-bottom: 60vh;
   }
 
-  .displayBottomHeaders {
+  .displayRightHeaders {
     margin-left: 20px;
   }
 
