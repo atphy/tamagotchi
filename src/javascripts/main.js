@@ -1,9 +1,9 @@
 import '../styles/main.scss';
-import statButtons from './components/modifyButtons';
+import modifyButtons from './components/modifyButtons';
 import statsDisplay from './components/statsDisplay';
 
 const init = () => {
-  statButtons.energyButton();
+  modifyButtons.modButtons();
   statsDisplay.generateStatsDisplay();
 };
 
