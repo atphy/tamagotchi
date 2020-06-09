@@ -1,34 +1,30 @@
-import tamagotchiStats from '../helpers/data/tamagochi-stats';
-import statsDisplay from './statsDisplay';
+import selectorButtons from './selectorButtons';
 
-const tamagotchiObj = tamagotchiStats.getTamagotchi();
-
-const plusStat = (selected) => {
-  const addStat = () => {
-    tamagotchiObj[selected] += 10;
-    statsDisplay.generateStatsDisplay();
+const hungerButton = () => {
+  const minusHunger = () => {
+    selectorButtons.minusStat('hunger');
   };
-  $('#plusButton').click(addStat);
-};
-
-const minusStat = (selected) => {
-  const subStat = () => {
-    tamagotchiObj[selected] -= 10;
-    statsDisplay.generateStatsDisplay();
+  $('#hungerButton').click(minusHunger);
+  const plusHunger = () => {
+    selectorButtons.plusStat('hunger');
   };
-  $('#minusButton').click(subStat);
+  $('#hungerButton').click(plusHunger);
 };
-
 
 const energyButton = () => {
   const minusEnergy = () => {
-    minusStat('energy');
+    selectorButtons.minusStat('energy');
   };
   $('#energyButton').click(minusEnergy);
   const plusEnergy = () => {
-    plusStat('energy');
+    selectorButtons.plusStat('energy');
   };
   $('#energyButton').click(plusEnergy);
 };
 
-export default { energyButton };
+const modButtons = () => {
+  hungerButton();
+  energyButton();
+};
+
+export default { modButtons };
