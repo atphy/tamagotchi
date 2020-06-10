@@ -3,20 +3,42 @@ import statsDisplay from './statsDisplay';
 
 const tamagotchiObj = tamagotchiStats.getTamagotchi();
 
-const plusStat = (selected) => {
+/* These buttons accept an argument passed by the button click in modifyButtons.js.
+  They modify the values present in the tamagotchi stats array and then reprint the dom strings
+  which display the four stat values to update the changes. */
+
+let selected = '';
+let addAmt = '';
+let subAmt = '';
+
+const selectedButton = (selectedStat) => {
+  selected = selectedStat;
+};
+
+const plusAmt = (selectedAddAmt) => {
+  addAmt = selectedAddAmt;
+};
+
+const minusAmt = (selectedSubAmt) => {
+  subAmt = selectedSubAmt;
+};
+
+const plusStat = () => {
   const addStat = () => {
-    tamagotchiObj[selected] += 10;
+    tamagotchiObj[selected] += addAmt;
     statsDisplay.generateStatsDisplay();
   };
   $('#plusButton').click(addStat);
 };
 
-const minusStat = (selected) => {
+const minusStat = () => {
   const subStat = () => {
-    tamagotchiObj[selected] -= 10;
+    tamagotchiObj[selected] -= subAmt;
     statsDisplay.generateStatsDisplay();
   };
   $('#minusButton').click(subStat);
 };
 
-export default { plusStat, minusStat };
+export default {
+  plusStat, minusStat, selectedButton, plusAmt, minusAmt,
+};
