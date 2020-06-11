@@ -23,22 +23,23 @@ const minusAmt = (selectedSubAmt) => {
   subAmt = selectedSubAmt;
 };
 
+
 const plusStat = () => {
-  const addStat = () => {
-    tamagotchiObj[selected] += addAmt;
-    statsDisplay.generateStatsDisplay();
-  };
-  $('#plusButton').click(addStat);
+  tamagotchiObj[selected] += addAmt;
+  statsDisplay.generateStatsDisplay();
 };
 
 const minusStat = () => {
-  const subStat = () => {
-    tamagotchiObj[selected] -= subAmt;
-    statsDisplay.generateStatsDisplay();
-  };
-  $('#minusButton').click(subStat);
+  tamagotchiObj[selected] -= subAmt;
+  statsDisplay.generateStatsDisplay();
+};
+
+
+const activateSelectors = () => {
+  $('#plusButton').click(plusStat);
+  $('#minusButton').click(minusStat);
 };
 
 export default {
-  plusStat, minusStat, selectedButton, plusAmt, minusAmt,
+  selectedButton, plusAmt, minusAmt, activateSelectors,
 };

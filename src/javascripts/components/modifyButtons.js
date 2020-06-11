@@ -10,13 +10,11 @@ const hungerButton = () => {
   const minusHunger = () => {
     selectorButtons.selectedButton('hunger');
     selectorButtons.minusAmt(20);
-    selectorButtons.minusStat();
   };
   $('#hungerButton').click(minusHunger);
   const plusHunger = () => {
     selectorButtons.selectedButton('hunger');
     selectorButtons.plusAmt(10);
-    selectorButtons.plusStat();
   };
   $('#hungerButton').click(plusHunger);
 };
@@ -24,13 +22,11 @@ const hungerButton = () => {
 const happinessButton = () => {
   const minusHappiness = () => {
     selectorButtons.selectedButton('fun');
-    selectorButtons.minusStat();
     selectorButtons.minusAmt(20);
   };
   $('#happinessButton').click(minusHappiness);
   const plusHappiness = () => {
     selectorButtons.selectedButton('fun');
-    selectorButtons.plusStat();
     selectorButtons.plusAmt(10);
   };
   $('#happinessButton').click(plusHappiness);
@@ -38,22 +34,26 @@ const happinessButton = () => {
 
 const strengthButton = () => {
   const minusStrength = () => {
-    selectorButtons.minusStat();
+    selectorButtons.selectedButton('strength');
+    selectorButtons.plusAmt(10);
   };
   $('#strengthButton').click(minusStrength);
   const plusStrength = () => {
-    selectorButtons.plusStat();
+    selectorButtons.selectedButton('strength');
+    selectorButtons.plusAmt(10);
   };
   $('#strengthButton').click(plusStrength);
 };
 
 const energyButton = () => {
   const minusEnergy = () => {
-    selectorButtons.minusStat('energy');
+    selectorButtons.selectedButton('energy');
+    selectorButtons.plusAmt(10);
   };
   $('#energyButton').click(minusEnergy);
   const plusEnergy = () => {
-    selectorButtons.plusStat('energy');
+    selectorButtons.selectedButton('energy');
+    selectorButtons.plusAmt(10);
   };
   $('#energyButton').click(plusEnergy);
 };
