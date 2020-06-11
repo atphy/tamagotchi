@@ -35,7 +35,7 @@ const happinessButton = () => {
 const strengthButton = () => {
   const minusStrength = () => {
     selectorButtons.selectedButton('strength');
-    selectorButtons.plusAmt(10);
+    selectorButtons.minusAmt(20);
   };
   $('#strengthButton').click(minusStrength);
   const plusStrength = () => {
@@ -48,7 +48,7 @@ const strengthButton = () => {
 const energyButton = () => {
   const minusEnergy = () => {
     selectorButtons.selectedButton('energy');
-    selectorButtons.plusAmt(10);
+    selectorButtons.minusAmt(20);
   };
   $('#energyButton').click(minusEnergy);
   const plusEnergy = () => {
