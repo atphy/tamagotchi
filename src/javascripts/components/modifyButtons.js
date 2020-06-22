@@ -1,26 +1,25 @@
 import selectorButtons from './selectorButtons';
 
-const modifyButton = (stat, subAmt, addAmt) => {
+const modifyButton = (stat, subAmtMin, subAmtMax, addAmtMin, addAmtMax) => {
   selectorButtons.selectedButton(stat);
-  selectorButtons.minusAmt(subAmt);
-  selectorButtons.plusAmt(addAmt);
-  console.log(stat);
+  selectorButtons.plusAmt(subAmtMin, subAmtMax);
+  selectorButtons.minusAmt(addAmtMin, addAmtMax);
 };
 
 const hungerButton = () => {
-  modifyButton('hunger', 10, 20);
+  modifyButton('hunger', 5, 15, 5, 15);
 };
 
 const happinessButton = () => {
-  modifyButton('fun', 10, 20);
+  modifyButton('fun', 5, 20, 5, 20);
 };
 
 const strengthButton = () => {
-  modifyButton('strength', 10, 20);
+  modifyButton('strength', 5, 15, 5, 15);
 };
 
 const energyButton = () => {
-  modifyButton('energy', 10, 20);
+  modifyButton('energy', 5, 20, 5, 20);
 };
 
 const modButtons = () => {

@@ -1,39 +1,50 @@
+/* eslint-disable no-param-reassign */
 import tamagotchiStats from '../helpers/data/tamagochi-stats';
 import statsDisplay from './statsDisplay';
 
 const tamagotchiObj = tamagotchiStats.getTamagotchi();
 
-/* These buttons accept an argument passed by the button click in modifyButtons.js.
-  They modify the values present in the tamagotchi stats array and then reprint the dom strings
-  which display the four stat values to update the changes. */
-
 let selected = '';
 let addAmt = '';
 let subAmt = '';
+
+const valueRandomizer = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+};
 
 const selectedButton = (selectedStat) => {
   selected = selectedStat;
 };
 
-const plusAmt = (selectedAddAmt) => {
-  addAmt = selectedAddAmt;
+const plusAmt = (min, max) => {
+  addAmt = valueRandomizer(min, max);
 };
 
-const minusAmt = (selectedSubAmt) => {
-  subAmt = selectedSubAmt;
+const minusAmt = (min, max) => {
+  subAmt = valueRandomizer(min, max);
 };
-
 
 const plusStat = () => {
   tamagotchiObj[selected] += addAmt;
-  statsDisplay.generateStatsDisplay();
+  if (tamagotchiObj[selected] > 100) {
+    tamagotchiObj[selected] = 100;
+    statsDisplay.generateStatsDisplay();
+  } else {
+    statsDisplay.generateStatsDisplay();
+  }
 };
 
 const minusStat = () => {
   tamagotchiObj[selected] -= subAmt;
-  statsDisplay.generateStatsDisplay();
+  if (tamagotchiObj[selected] < 0) {
+    tamagotchiObj[selected] = 0;
+    statsDisplay.generateStatsDisplay();
+  } else {
+    statsDisplay.generateStatsDisplay();
+  }
 };
-
 
 const activateSelectors = () => {
   $('#plusButton').click(plusStat);
@@ -43,5 +54,3 @@ const activateSelectors = () => {
 export default {
   selectedButton, plusAmt, minusAmt, activateSelectors,
 };
-
-// ATTEMPT TO SIMPLIFY
