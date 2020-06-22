@@ -43,3 +43,5 @@ const activateSelectors = () => {
 export default {
   selectedButton, plusAmt, minusAmt, activateSelectors,
 };
+
+// ATTEMPT TO SIMPLIFY

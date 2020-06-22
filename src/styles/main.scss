@@ -8,9 +8,9 @@ body {
   }
 
  .topButtons {
-   display: flex;
    align-self: flex-start;
    justify-self: center;
+   position: absolute;
  }
 
   .btn {
