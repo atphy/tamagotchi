@@ -1,8 +1,8 @@
 const tamagotchiObject = {
   name: 'Tommy the Tamagotchi',
-  hunger: 50,
+  hunger: 100,
   fun: 50,
-  strength: 50,
+  strength: 100,
   energy: 50,
   imageDefault: 'src/img/LCD Handhelds - Tamagotchi Connection Version 2 - Debatchi (1) (1).png',
 };
