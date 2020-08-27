@@ -8,7 +8,7 @@ https://github.com/nss-nightclass-projects/exercise-vault/blob/master/MODULES_ta
 ![Main View](screenshots/ap-tamagotchi-demo.gif)
 
 ## View Project
-To view the project, clone it down from Github and run in a terminal! Firebase deploy coming soon!
+https://ap-tamagotchi.web.app/
 
 ## Technologies Used
 [![Vanilla JavaScript](https://img.shields.io/badge/-Vanilla%20JavaScript-2c9fcc?style=flat-square)](#) [![HTML](https://img.shields.io/badge/-HTML-2c9fcc?style=flat-square)](#) [![CSS](https://img.shields.io/badge/-CSS-2c9fcc?style=flat-square)](#) [![JavaScript Modules](https://img.shields.io/badge/JavaScript-Modules-lightgrey)](#) [![SASS](https://img.shields.io/badge/-SASS-ff69b4)](#)
